@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastros de Fornecedor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"></link>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <nav class="supplier-nav-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3" >
+                    <img class="text-center" src="../static/images/logo60px.png" alt="Logo">
+                </div>
+                <div class="col-md-6" id="supplier-nav-body-h1">
+                    <h1 class="text-center">FORNECEDOR</h1>
+                </div>
+                <div class="col-md-3" id="supplier-nav-body-button">
+                    <input type="submit" class="btn btn-primary" value="VOLTAR" >
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="row" id="supplier-section-row">
+            <div class="col-md-3">
+                <nav id="supplier-section-nav">
+                    <div><button type="button" class="btn btn-primary">Buscar</button></div>
+                    <div><button type="button" class="btn btn-primary">Incluir</button></div>
+                    <div><button type="button" class="btn btn-primary">Salvar</button></div>
+                    <div><button type="button" class="btn btn-primary">Excluir</button></div>
+                    <div><button type="button" class="btn btn-primary">Relatório</button></div>
+                    <div><button type="button" class="btn btn-primary">Limpar</button></div>
+                </nav> 
+            </div>
+            <div class="col-md-9">
+                <form action="#" method="POST">
+                    <div class="row" id="supplier-section-row-divInterna">
+                        <div class="col-md-2">
+                            <label for="txtId" class="form-label">ID</label> 
+                            <input id="txtId" class="form-control" type="number">
+                        </div>
+                    </div>
+                    <div class="row" id="supplier-section-row-divInterna">
+                        <div class="col-md-9">
+                            <label for="txtNome" class="form-label">Nome</label> 
+                            <input id="txtNome" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="row" id="supplier-section-row-divInterna">
+                        <div class="col-md-4">
+                            <label for="txtCnpj" class="form-label">CNPJ</label> 
+                            <input id="txtCnpj" class="form-control" type="text">
+                        </div>
+                        <div class="col-md-5">
+                            <label for="txtTelefone" class="form-label">Telefone</label> 
+                            <input id="txtTelefone" class="form-control" type="tel">
+                        </div>
+                    </div>
+                    <div class="row" id="supplier-section-row-divInterna">
+                        <div class="col-md-9">
+                            <label for="txtEndereco" class="form-label">Endereço</label> 
+                            <input id="txtEndereco" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="row" id="supplier-section-row-divInterna">
+                        <div class="col-md-4">
+                            <label for="txtNumero" class="form-label">Número</label> 
+                            <input id="txtNumero" class="form-control" type="text">
+                        </div>
+                        <div class="col-md-5">
+                            <label for="txtBairro" class="form-label">Bairro</label> 
+                            <input id="txtBairro" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="row" id="supplier-section-row-divInterna">
+                        <div class="col-md-4">
+                            <label for="txtUf" class="form-label">UF</label> 
+                            <input id="txtUf" class="form-control" type="text">
+                        </div>
+                        <div class="col-md-5">
+                            <label for="txtCidade" class="form-label">Cidade</label> 
+                            <input id="txtCidade" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="row" id="supplier-section-row-divInterna">
+                        <div class="col-md-9">
+                            <label for="txtEmail" class="form-label">Email</label> 
+                            <input id="txtEmail" class="form-control" type="email">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </header>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
