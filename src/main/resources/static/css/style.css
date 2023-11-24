@@ -58,7 +58,7 @@
     padding-bottom: 20px;
 }
 
-#section-row {
+#product-section-row {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 18pt;
@@ -66,6 +66,46 @@
     line-height: 50px;
 }
 
-#section-row-divInterna {
+#product-section-row-divInterna {
+    padding-bottom: 55px;
+}
+
+/* CSS DA PÁGINA CLIENT */
+
+.client-nav-body {
+    background-image: linear-gradient(to right, #003A7A, #0177C1, #003C7B);
+}
+
+#client-nav-body-button {
+    text-align: end;
+    margin: auto;
+}
+
+#client-nav-body-h1 {
+    margin: auto;
+}
+
+#client-section-nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#client-section-nav > div {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#client-section-row {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 18pt;
+    padding-top: 40px;
+    line-height: 50px;
+}
+
+#client-section-row-divInterna {
     padding-bottom: 55px;
 }
