@@ -11,16 +11,17 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "produto_congelado")
-public class ProdutoCongeladoEntity {
+@Table(name = "product")
+public class ProductEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String nome;
-    private String descricao;
-    private Double preco;
-    private Double quantidadeEmEstoque;
-    private Double proporcao;
-    private Date data;
+    private Long originStockId;
+    private String originStockName;
+    private String name;
+    private String description;
+    private Double price;
+    private Double quantityInStock;
+    private Date releaseDate;
 }

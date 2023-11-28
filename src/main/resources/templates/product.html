@@ -6,7 +6,7 @@
     <title>Cadastros de Produtos</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
 </head>
 <body>
     <nav class="product-nav-body">
@@ -30,54 +30,55 @@
                 <nav id="product-section-nav">
                     <div><button type="button" class="btn btn-primary">Buscar</button></div>
                     <div><button type="button" class="btn btn-primary">Incluir</button></div>
-                    <div><button type="button" class="btn btn-primary">Salvar</button></div>
+                    <div><button type="submit" class="btn btn-primary">Salvar</button></div>
                     <div><button type="button" class="btn btn-primary">Excluir</button></div>
                     <div><button type="button" class="btn btn-primary">Relatório</button></div>
                     <div><button type="button" class="btn btn-primary">Limpar</button></div>
                 </nav> 
             </div>
             <div class="col-md-9">
-                <form action="#" method="POST">
+                <form action="#"  th:action="@{/saveProduct}" th:object="${product}" method="POST">
                     <div class="row" id="product-section-row-divInterna">
                         <div class="col-md-2">
                             <label for="txtId" class="form-label">ID</label> 
-                            <input id="txtId" class="form-control" type="number">
+                            <input th:field="*{id}" class="form-control" type="text">
                         </div>
                         <div class="col-md-2">
                             <label for="txtCod" class="form-label">Cod.</label> 
-                            <input id="txtCod" class="form-control" type="number">
+                            <input th:field="*{originStockId}" class="form-control" type="text">
                         </div>
                         <div class="col-md-3">
                             <label for="txtEstoqueOrigem" class="form-label">Estoque Origem</label> 
-                            <input id="txtEstoqueOrigem" class="form-control" type="number">
+                            <input th:field="*{originStockName}" class="form-control" type="text">
                         </div>
                         <div class="col-md-2">
                             <label for="txtId" class="form-label">Data</label> 
-                            <input id="txtId" class="form-control" type="date">
+                            <input th:field="*{releaseDate}" class="form-control" type="date">
                         </div>
                     </div>
                     <div class="row" id="product-section-row-divInterna">
                         <div class="col-md-9">
                             <label for="txtNome" class="form-label">Nome</label> 
-                            <input id="txtNome" class="form-control" type="text">
+                            <input th:field="*{name}" class="form-control" type="text">
                         </div>
                     </div>
                     <div class="row" id="product-section-row-divInterna">
                         <div class="col-md-9">
                             <label for="txtDescricao" class="form-label">Descrição</label> 
-                            <input id="txtDescricao" class="form-control" type="text">
+                            <input th:field="*{description}" class="form-control" type="text">
                         </div>
                     </div>
                     <div class="row" id="product-section-row-divInterna">
                         <div class="col-md-4">
                             <label for="txtPreco" class="form-label">Preço</label> 
-                            <input id="txtPreco" class="form-control" type="text">
+                            <input th:field="*{price}" class="form-control" type="text">
                         </div>
                         <div class="col-md-5">
                             <label for="txtQuantEstoque" class="form-label">Quantidade Em Estoque</label> 
-                            <input id="txtQuantEstoque" class="form-control" type="text">
+                            <input th:field="*{quantityInStock}" class="form-control" type="text">
                         </div>
                     </div>
+                    <button type="submit" class="btn btn-info mt-4">Salvar</button>
                 </form>
             </div>
         </div>

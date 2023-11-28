@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
 
     <nav class="index-nav">
         <ul class="nav">
             <li class="index-nav-item">
-                <a th:href="@{/criarProdutoCongForm}" class="btn btn-primary btn-sm mb-3">PRODUTO</a>
+                <a th:href="@{/createProductForm}" class="btn btn-primary">PRODUTO</a>
             </li>
             <li class="index-nav-item">
                 <input type="submit" class="btn btn-primary" value="CLIENTE" >
