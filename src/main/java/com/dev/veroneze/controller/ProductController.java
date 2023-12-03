@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.dev.veroneze.data.ProductEntity;
 import com.dev.veroneze.service.ProductService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/product")
 public class ProductController {
@@ -37,7 +39,7 @@ public class ProductController {
     }
 
     @PostMapping("/add")
-    public ResponseEntity<ProductEntity> addProduct(@RequestBody ProductEntity prod) {
+    public ResponseEntity<ProductEntity> addProduct(@Valid @RequestBody ProductEntity prod) {
         var newProduct = productService.createProduct(prod);
         return new ResponseEntity<ProductEntity>(newProduct, HttpStatus.CREATED);
     }

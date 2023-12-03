@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.dev.veroneze.data.ProductEntity;
+import com.dev.veroneze.exception.ResourceNotFoundException;
 import com.dev.veroneze.repository.ProductRepository;
 
 @Service
@@ -33,7 +34,7 @@ public class ProductService {
     }
 
     public ProductEntity getProductId(Long prodId) {
-        return productRepository.findById(prodId).orElse(null);
+        return productRepository.findById(prodId).orElseThrow(() -> new ResourceNotFoundException("Produto não encontrado " + prodId));
     }
 
     public List<ProductEntity> listAllProducts() {
@@ -45,4 +46,7 @@ public class ProductService {
         productRepository.deleteById(prod.getId());
     }
 
+    public Long findNextId() {
+        return productRepository.findNextId();
+    }
 }

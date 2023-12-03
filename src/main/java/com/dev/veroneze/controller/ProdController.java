@@ -24,15 +24,8 @@ public class ProdController {
     }
 
     @PostMapping("/saveProduct")
-    public String saveProduct(@ModelAttribute("product") ProductEntity prod, BindingResult result) {
-        if (result.hasErrors()) {
-            return "insert";
-        }
-        if (prod.getId()==null) {
-            productService.createProduct(prod);
-        } else {
-            productService.updateProduct(prod.getId(), prod);
-        }
+    public String saveProduct(@ModelAttribute("product") ProductEntity prod) {
+        productService.createProduct(prod);
         return "redirect:/";
     }
 }
